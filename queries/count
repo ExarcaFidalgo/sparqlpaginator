@@ -1,0 +1,10 @@
+SELECT (COUNT(DISTINCT ?item) as ?subsetting_size)
+WHERE {
+  {
+    ?item wdt:P31/wdt:P279* wd:Q202444 .
+  }
+  UNION
+  {
+    ?item wdt:P31/wdt:P279* wd:Q101352 .
+  }
+}
